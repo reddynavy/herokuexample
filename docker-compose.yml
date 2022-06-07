@@ -10,5 +10,4 @@ services:
             - PORT=${PORT}
         ports:
             - ${PORT}:${PORT}
-        volumes:
-            - ./app:src/
+        
