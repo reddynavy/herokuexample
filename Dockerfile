@@ -1,7 +1,7 @@
 FROM python:3.9
-EXPOSE 8501
-WORKDIR /app
+
+WORKDIR /src
 COPY requirement.txt ./requirement.txt
 RUN pip3 install -r requirement.txt
 COPY . .
-CMD streamlit run app.py
+CMD ["sh", "-c", "streamlit run --server.port $PORT src/app.py"]
